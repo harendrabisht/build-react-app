@@ -1,0 +1,63 @@
+{
+  "name": "build-react-app",
+  "version": "1.0.0",
+  "description": "setup react application without using create-react-app",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --port 3030",
+    "build": "webpack --mode production",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "test:watch": "jest --watch --coverage"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "thunk",
+    "jest",
+    "enzyme",
+    "css-loader",
+    "sass-loader"
+  ],
+  "author": "Harendra singh bisht",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.7.1",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "modulePaths": [
+      "src",
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(scss|css)$": "identity-obj-proxy"
+    },
+    "setupFiles": [
+      "./setupTests.js"
+    ]
+  }
+}
